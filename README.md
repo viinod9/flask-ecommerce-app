@@ -15,7 +15,7 @@ A modular Flask-based e-commerce web application that supports user signup, logi
 
 ---
 
-## ⚙️ Project Structure
+## 🛠️ Project Structure
 
 ```
 Flask/
@@ -50,11 +50,117 @@ Flask/
 └── .gitignore
 ```
 
+---
 
+## 🛠️ Installation
 
+1️⃣ Clone the repository
 
+```bash
+git clone https://github.com/<your-username>/flask-ecommerce-app.git
+cd flask-ecommerce-app
+```
 
+2️⃣ Create and activate virtual environment
 
+```bash
+python3 -m venv flask_venv
+source flask_venv/bin/activate
+```
 
+3️⃣ Install dependencies
 
+```bash
+pip install -r requirements.txt
+```
 
+---
+
+## ✅ Database Initialization
+
+Open Python shell:
+
+```bash
+python
+```
+
+Run the following commands to create database tables:
+
+```python
+from app import create_app
+from app.extensions import db
+
+app = create_app()
+app.app_context().push()
+db.create_all()
+exit()
+```
+
+(Optional) Add sample products:
+
+```python
+from app import create_app
+from app.extensions import db
+from app.models import Product
+
+app = create_app()
+app.app_context().push()
+
+product1 = Product(name="Laptop", price=999.99)
+product2 = Product(name="Smartphone", price=499.99)
+
+db.session.add_all([product1, product2])
+db.session.commit()
+exit()
+```
+
+---
+
+## ▶️ Running the Application
+
+```bash
+python run.py
+```
+
+Visit in browser:
+
+```
+http://127.0.0.1:5000/auth/signup
+```
+
+Flow:  
+Signup → Login → Products → Add to Cart → View Cart
+
+---
+
+## 🔧 Deactivate Virtual Environment
+
+```bash
+deactivate
+```
+
+---
+
+## 📦 Dependencies
+
+All dependencies are listed in `requirements.txt`.  
+To regenerate (if needed):
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+## 📚 Notes
+
+- Uses SQLite for simplicity  
+- Passwords are hashed using `pbkdf2:sha256`  
+- Modular structure using Flask Blueprints
+
+---
+
+## 📧 Contact
+
+Created by [Your Name]  
+GitHub: [https://github.com/<your-username>](https://github.com/<your-username>)
