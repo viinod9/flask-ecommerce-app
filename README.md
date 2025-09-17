@@ -17,7 +17,7 @@ A modular Flask-based e-commerce web application that supports user signup, logi
 
 ## ⚙️ Project Structure
 
-
+```
 Flask/
 ├── flask_venv/                # Virtual environment
 ├── run.py                     # Entry point to run the app
@@ -48,7 +48,7 @@ Flask/
 ├── ecommerce.db               # SQLite database (auto-generated)
 ├── requirements.txt           # Project dependencies
 └── .gitignore
-
+```
 
 
 
