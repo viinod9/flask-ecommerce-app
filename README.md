@@ -57,7 +57,7 @@ Flask/
 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/flask-ecommerce-app.git
+git clone https://github.com/<viinod9>/flask-ecommerce-app.git
 cd flask-ecommerce-app
 ```
 
@@ -162,5 +162,5 @@ pip freeze > requirements.txt
 
 ## 📧 Contact
 
-Created by [Your Name]  
-GitHub: [https://github.com/<your-username>](https://github.com/<your-username>)
+Created by [Vinod Kumar]  
+GitHub: [https://github.com/<viinod9>](https://github.com/<viinod9>)
